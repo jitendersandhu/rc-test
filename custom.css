@@ -129,6 +129,7 @@ body.plans-and-pricing-v5 .user_scale_inner_slider .sliders-new-heading {
 	float: left;
     margin: 0.65rem 0 0 0.5rem;
     text-transform: lowercase !important;
+    font-size: 1rem;
 }
 
 body.plans-and-pricing-v5 .user_scale_inner_slider .userSelect {
