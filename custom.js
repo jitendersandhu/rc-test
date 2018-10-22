@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	var cssSourceHref = 'https://cdn.jsdelivr.net/gh/jitendersandhu/rc-test@a0a80f3e93638e4dd83ee52460222a8adbc32332/custom.css',
+	var cssSourceHref = 'https://cdn.jsdelivr.net/gh/jitendersandhu/rc-test@86ab8cd819dfb31db63fe41505f1c126b7f96ab9/custom.css',
 		cssLinkElm = '<link rel="stylesheet" href="' + cssSourceHref + '">'
 		comparePlansHTML = '<a class="compare-plans"><span>Compare plans</span>' +
 							'<svg id="svg--2055864217" viewBox="0 0 19 11" class="compare-plans-arrow">' +
@@ -10,7 +10,9 @@ $(document).ready(function () {
 		$plansAndPricingTiles = $('.plansTable.price_section .plansExtHeader.CId-sticky-range--1.IId-sticky-range--1'),
 		$yearMonthToggleBtn = $('.firstItemContent.slider_content_wrapper .toggle_btn .paySelect'),
 		$yearMonthToggleAnnuallyLabel = $yearMonthToggleBtn.children('.ann_txt').clone(),
-		$yearMonthToggleAnnuallySaveMsg = $yearMonthToggleBtn.children('.ann_savetxt').clone(),
+		yearMonthToggleAnnuallySaveMsgNumber = $yearMonthToggleBtn.find('.ann_savetxt .saveup').html(),
+		yearMonthToggleAnnuallySaveMsg = '<span class="ann_savetxt"><strong> (save <span class="saveup">' +
+										yearMonthToggleAnnuallySaveMsgNumber + '</span>%)</strong></span>',
 		$yearMonthToggleMonthlyLabel = $yearMonthToggleBtn.children('.mon_tx').clone(),
 		$userScaleSliderWrapper = $('.user_scale_inner_slider');
 
@@ -24,7 +26,7 @@ $(document).ready(function () {
 	$yearMonthToggleMonthlyLabel.text('Pay monthly');
 	$yearMonthToggleBtn.prepend('<span id="custom-price-slider"></span>');
 	$('#custom-price-slider').append($yearMonthToggleAnnuallyLabel);
-	$('#custom-price-slider').append($yearMonthToggleAnnuallySaveMsg);
+	$('#custom-price-slider').append($(yearMonthToggleAnnuallySaveMsg));
 	$yearMonthToggleBtn.append($yearMonthToggleMonthlyLabel);
 	$userScaleSliderWrapper.prepend('<p class="slider_top_heading sliders-new-heading"># of users</p>');
 	$plansAndPricingTiles.find('.perUser').html('/user/month *');
