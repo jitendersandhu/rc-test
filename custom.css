@@ -1,0 +1,136 @@
+@-webkit-keyframes downArrowFlash {
+ 	0%, 20%, 50%, 80%, 100% {
+    	transform: translateY(0) rotate(-180deg);
+  	}
+
+	40% {
+    	transform: translateY(15px) rotate(-180deg);
+  	}
+	60% {
+    	transform: translateY(5px) rotate(-180deg);
+  	}
+}
+
+@keyframes downArrowFlash {
+	0%, 20%, 50%, 80%, 100% {
+    	transform: translateY(0) rotate(-180deg);
+  	}
+
+	40% {
+    	transform: translateY(15px) rotate(-180deg);
+  	}
+	60% {
+    	transform: translateY(5px) rotate(-180deg);
+  	}
+}
+body.plans-and-pricing-v5 .customHeroNav .customFloatNav,
+body.plans-and-pricing-v5 .par_heroimage {
+	display: none !important;
+}
+
+body.plans-and-pricing-v5 #sticky_cta .sticky_cta_content {
+	padding: 0.35rem 0;
+}
+
+body.plans-and-pricing-v5 .heroImg .contentHero {
+	padding: 0.65rem 0;
+}
+
+body.plans-and-pricing-v5 .heroImg .contentHero .titleHero {
+	margin-bottom: 0.5rem;
+}
+
+body.plans-and-pricing-v5 .plansTable .plansExtHeader .plansHeaderItem .firstItemContent {
+    background: #ffffff;
+    padding: 0;
+	margin: 0.5rem 0;
+	margin-bottom: 1rem;
+}
+
+body.plans-and-pricing-v5 .slider_top_heading {
+	margin-bottom: 0.5rem;
+}
+
+body.plans-and-pricing-v5 .plansTable .plansExtHeader .plansHeaderItem .plansContent {
+	padding: 1.2rem;
+}
+
+body.plans-and-pricing-v5 .plansTable .plansExtHeader .plansHeaderItem.plan .bottomContent {
+	margin-top: 0.5rem;
+}
+
+body.plans-and-pricing-v5 .plansTable .plansExtHeader .plansHeaderItem .bottomFeatureContent {
+	margin: 0.5rem 0 0;
+}
+
+body.plans-and-pricing-v5 .compare-plans {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #0684BD;
+	font-size: 1rem;
+	padding: 0.5rem 0;
+	cursor: pointer;
+}
+
+body.plans-and-pricing-v5 .compare-plans .compare-plans-arrow {
+	fill: #035379;
+	width: 15px;
+    height: 15px;
+    transform: rotate(-180deg) !important;
+    -webkit-animation: downArrowFlash 2s infinite;
+	animation: downArrowFlash 2s infinite;
+}
+
+body.plans-and-pricing-v5 .plansTable .plansExtHeader .plansHeaderItem .firstItemContent .slider_top_heading {
+	display: none;
+}
+
+body.plans-and-pricing-v5 .plansTable .slider_top_heading.sliders-new-heading {
+	display: block !important;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+body.plans-and-pricing-v5 .plansTable .plansExtHeader .plansHeaderItem .firstItemContent .paySelect span {
+	white-space: nowrap;
+}
+
+body.plans-and-pricing-v5 .plansTable .plansExtHeader .plansHeaderItem .firstItemContent .toggle_inner_section {
+	margin-right: 0;
+    width: 100%;
+    padding: 26px 15px;
+}
+
+body.plans-and-pricing-v5 .plansTable .plansExtHeader .plansHeaderItem .firstItemContent .paySelect .toggleradio .toggle-child {
+	right: 0 !important;
+}
+
+body.plans-and-pricing-v5 .plansTable.payAnnually .plansExtHeader .plansHeaderItem .firstItemContent .paySelect .toggleradio .toggle-child {
+	right: 20px !important;
+}
+
+body.plans-and-pricing-v5 .user_scale_inner_slider {
+    position: relative;
+}
+
+body.plans-and-pricing-v5 .user_scale_inner_slider::before {
+	content: "";
+    position: absolute;
+    height: 51px;
+    width: 2px;
+    top: 11px;
+    left: 0;
+    background: #E3E6E8;
+}
+
+body.plans-and-pricing-v5 .user_scale_inner_slider .sliders-new-heading {
+	float: left;
+    margin: 0.65rem 0 0 0.5rem;
+    text-transform: lowercase !important;
+}
+
+body.plans-and-pricing-v5 .user_scale_inner_slider .userSelect {
+    margin-left: 85px;
+}
