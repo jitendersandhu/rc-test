@@ -16,23 +16,39 @@ $(document).ready(function () {
 		$yearMonthToggleMonthlyLabel = $yearMonthToggleBtn.children('.mon_tx').clone(),
 		$userScaleSliderWrapper = $('.user_scale_inner_slider');
 
+	// Add custom class to Body to customize the styles by targeting this class in custom Css
 	$('body').eq(0).addClass('plans-and-pricing-v5');
 
+	// Remove current Text helpers from Price Slider, to add in new order as per new design later
 	$yearMonthToggleBtn.children('.mon_tx').remove();
 	$yearMonthToggleBtn.children('.ann_txt').remove();
 	$yearMonthToggleBtn.children('.ann_savetxt').remove();
+
+	// Add Combined heading for both Sliders
 	$('.plansTable:not(.price_section)').prepend(slidersSectionHeading);
+
+	// Add helper texts to the price slider as per the new design
 	$yearMonthToggleAnnuallyLabel.text('Pay annually');
 	$yearMonthToggleMonthlyLabel.text('Pay monthly');
 	$yearMonthToggleBtn.prepend('<span id="custom-price-slider"></span>');
 	$('#custom-price-slider').append($yearMonthToggleAnnuallyLabel);
 	$('#custom-price-slider').append($(yearMonthToggleAnnuallySaveMsg));
 	$yearMonthToggleBtn.append($yearMonthToggleMonthlyLabel);
+
+	// Add new helper text to the Users slider as per new design
 	$userScaleSliderWrapper.prepend('<p class="slider_top_heading sliders-new-heading"># of users</p>');
+
+	// Update perUser helper text in pricing tiles as per new design
 	$plansAndPricingTiles.find('.perUser').html('/user/month *');
 
+	// Append the custom (hosted) css in the head using link
 	$('head').append(cssLinkElm);
+
+	// Add Compare Plans anchor to indicate more content below the fold
 	$(comparePlansHTML).insertAfter($plansAndPricingTiles);
+
+	// On click handler for the "Compare Plans" down arrow anchor to handle
+	// smoth scrolling user to the Pricing compare table section on click
 	$('.compare-plans').click(function() {
 		setTimeout(function() {
             $('html, body').animate({
